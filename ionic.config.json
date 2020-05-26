@@ -1,0 +1,7 @@
+{
+  "name": "ionic-academind",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
