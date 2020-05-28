@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>City</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let item of cityList">
+    <ion-item>
+      <ion-label>{{ item.id}}</ion-label>
+      <ion-label>{{item.name}}</ion-label>
+      <ion-label>{{item.citycode}}</ion-label>
+           
+    </ion-item>
+    <ion-list>
+      <ion-item *ngFor="let bin of item.binTarget">
+        <ion-label>{{bin.material}}</ion-label>
+        <ion-label>{{bin.color}}</ion-label>
+        <ion-label>{{bin.destination}}</ion-label>
+      </ion-item>      
+    </ion-list>
+    <br>
+  </ion-list>
+  
+</ion-content>
