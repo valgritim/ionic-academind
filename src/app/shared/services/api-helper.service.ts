@@ -40,8 +40,8 @@ export class ApiHelperService {
       req = this.http.get(url, {...requestOptions, observe: 'response'});
 
     } else if (methodWanted === 'post') {
+      console.log(`dans le post:${Object.values(data)}`);
       req = this.http.post(url, data, {...requestOptions, observe: 'response'});
-      console.log(Object.values(data));
     } else if (methodWanted === 'put') {
       req = this.http.put(url, data, {...requestOptions, observe: 'response'});
 

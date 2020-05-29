@@ -86,13 +86,15 @@ export class CityService {
 
   public createCity(city: City): Promise<any>{
     let endpoint = `/city`;
-    console.log("avant l'envoi: " + city.name);
+    console.log(`avant l'envoi: ${Object.values(city)}`);
     let promise = new Promise((resolve, reject) => {
       this.api.post({ endpoint : endpoint, data : city})
           .then(
              res => { 
                resolve(res);
-               console.log(`envoi data service:${Object.values(city)}`);
+               city.getbinTarget.forEach(function(value,key){ 
+                 console.log(value); console.log(key); console.log({...city});
+                });
                
              },
              msg => {
